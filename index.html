@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation, Elevated | Luxury Technology Experience</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Experience the future of luxury technology. Crafted with precision, designed for brilliance. Explore our premium gold-edition Apple-inspired products.">
+    <meta name="keywords"
+        content="Luxury Technology, Gold Apple, Custom Apple, Premium Gadgets, High-end Tech, Innovation">
+    <meta property="og:title" content="Innovation, Elevated | Luxury Technology Experience">
+    <meta property="og:description"
+        content="Explore the future of luxury technology with our exclusive gold-edition collection.">
+    <meta property="og:image" content="product_iphone.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="loading">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-logo">
+            <svg viewBox="0 0 100 100" class="logo-svg">
+                <path d="M50 10 C50 10 30 15 30 40 C30 65 50 90 50 90 C50 90 70 65 70 40 C70 15 50 10 50 10 Z"
+                    fill="none" stroke="url(#goldGradient)" stroke-width="2" />
+                <circle cx="50" cy="40" r="10" fill="url(#goldGradient)" />
+                <defs>
+                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#F5D26A;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="loading-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg viewBox="0 0 100 100" class="logo-small">
+                    <circle cx="50" cy="50" r="30" fill="none" stroke="#D4AF37" stroke-width="4" />
+                    <path d="M50 20 L50 40 M50 60 L50 80 M20 50 L40 50 M60 50 L80 50" stroke="#D4AF37" stroke-width="4"
+                        stroke-linecap="round" />
+                </svg>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#home-page" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#booking-section" class="nav-link">Reservation</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#support" class="nav-link">Support</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="signin-trigger" class="btn-signin-nav">Sign In</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#home-page" class="mobile-link">Home</a>
+            <a href="#products" class="mobile-link">Products</a>
+            <a href="#features" class="mobile-link">Features</a>
+            <a href="#reviews" class="mobile-link">Reviews</a>
+            <a href="#support" class="mobile-link">Support</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <button class="btn btn-primary" style="margin-top: 2rem;">Sign In</button>
+        </div>
+    </div>
+
+    <!-- Background Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <main id="home-page">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="animation-container">
+                <canvas id="hero-sequence"></canvas>
+            </div>
+
+            <div class="hero-text-wrapper">
+                <div class="hero-text">
+                    <h1 class="reveal">Innovation, Elevated.</h1>
+                    <p class="reveal">Crafted with precision. Designed for brilliance.<br>Experience the future of
+                        luxury technology.</p>
+                    <div class="glow-u-line reveal"></div>
+                </div>
+
+                <div class="cta-container reveal">
+                    <a href="#booking-section" class="btn btn-primary">Book the Product</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section id="products" class="scroll-section">
+            <div class="container">
+                <h2 class="section-title">The Collection</h2>
+                <div class="product-grid">
+                    <div class="product-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <img src="product_iphone.png" alt="iPhone 15 Pro Gold Edition" class="product-img">
+                        <div class="product-info">
+                            <h3>iPhone 15 Pro Gold</h3>
+                            <p>Power. Precision. Luxury.</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <img src="product_macbook.png" alt="MacBook Pro Gold Edition" class="product-img">
+                        <div class="product-info">
+                            <h3>MacBook Pro Gold</h3>
+                            <p>Boundless. Refined. Luxury.</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <img src="product_airpods.png" alt="AirPods Max Gold Edition" class="product-img">
+                        <div class="product-info">
+                            <h3>AirPods Max Gold</h3>
+                            <p>Immersive. Defined. Luxury.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Showcase -->
+        <section id="features" class="scroll-section">
+            <div class="container">
+                <div class="features-strip">
+                    <div class="feature-item">
+                        <div class="feature-icon">✨</div>
+                        <h4>Ultra Performance</h4>
+                        <p>Leading the next generation.</p>
+                    </div>
+                    <div class="feature-divider"></div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💎</div>
+                        <h4>Luxury Finish</h4>
+                        <p>24k gold hand-brushed finish.</p>
+                    </div>
+                    <div class="feature-divider"></div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚙️</div>
+                        <h4>Precision Engineering</h4>
+                        <p>Crafted to the micron.</p>
+                    </div>
+                    <div class="feature-divider"></div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h4>Advanced Security</h4>
+                        <p>Biometric encryption standard.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="booking-section" class="scroll-section">
+            <div class="container">
+                <div class="booking-card">
+                    <div class="booking-content">
+                        <h2 class="section-title" style="margin-bottom: 2rem;">Secure Your Legacy</h2>
+                        <p style="margin-bottom: 3rem; color: rgba(255,255,255,0.6);">This edition is limited to 500
+                            hand-crafted units. Reserve your position in the collection today.</p>
+                        <div class="booking-options">
+                            <div class="option-card">
+                                <h3>Private Access</h3>
+                                <ul>
+                                    <li>Priority Shipping</li>
+                                    <li>Custom Engraving</li>
+                                    <li>Personal Concierge</li>
+                                </ul>
+                                <a href="booking.html" class="btn btn-primary">Reserve private series</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="reviews" class="scroll-section">
+            <div class="container">
+                <h2 class="section-title">Verified Experiences</h2>
+                <div class="reviews-carousel">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">👤</div>
+                            <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="review-text">"The pinnacle of design. It feels like a piece of art that somehow powers
+                            my life."</p>
+                        <p class="review-author">Alexander Vance</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">👤</div>
+                            <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="review-text">"Exceptional customer service and a product that exceeded every
+                            expectation I had."</p>
+                        <p class="review-author">Helena Sterling</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">👤</div>
+                            <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="review-text">"The weight, the texture, the gold finish—everything screams luxury. A
+                            masterpiece."</p>
+                        <p class="review-author">Julian Graves</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section id="support" class="scroll-section">
+            <div class="container">
+                <h2 class="section-title">Support & Intelligence</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">What is the warranty on gold finishes? <span class="faq-plus">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Every gold-finished product comes with a lifetime re-plating guarantee and a 5-year
+                                mechanical warranty.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Are these products limited editions? <span class="faq-plus">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, each series is numbered and produced in limited runs of 500 units globally.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How does encrypted handling work? <span class="faq-plus">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We use end-to-end hardware-level encryption for all sessions and user data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter">
+            <div class="newsletter-bar">
+                <p>Stay informed on limited releases.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit" class="btn-subscribe">Subscribe</button>
+                    <div class="gold-accent-line"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Support/Contact Form -->
+        <section id="contact" class="scroll-section">
+            <div class="container">
+                <h2 class="section-title">Secure Inquiry</h2>
+                <div class="contact-grid">
+                    <form class="luxury-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="How can we assist you?" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="file-upload" class="file-label">
+                                <span>📎 Attach relevant documentation</span>
+                                <input type="file" id="file-upload" hidden>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 100 100" class="logo-small">
+                            <circle cx="50" cy="50" r="30" fill="none" stroke="#D4AF37" stroke-width="4" />
+                        </svg>
+                        <span>INNOVATION</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Shipping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#">𝕏</a>
+                        <a href="#">📷</a>
+                        <a href="#">🔗</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>concierge@luxuryapple.io</p>
+                    <p>+1 (800) GOLD-APP</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Innovation Luxury Experience. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Book Now (Mobile Only) -->
+    <a href="booking.html" id="mobile-book-btn">
+        <span>BOOK</span>
+    </a>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-close">&times;</div>
+            <h2 class="section-title" style="font-size: 2.3rem; margin-bottom: 2rem;">Luxury Access</h2>
+            <form id="email-login-form" class="luxury-form"
+                style="padding: 2rem; border: none; background: transparent; max-width: 100%;">
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Secure Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Unlock Experience</button>
+                <div
+                    style="text-align: center; margin-top: 1.5rem; color: rgba(212,175,55,0.4); font-size: 0.8rem; letter-spacing: 0.1rem;">
+                    🔒 SESSIONS ARE HARDWARE ENCRYPTED
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
